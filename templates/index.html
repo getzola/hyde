@@ -24,7 +24,6 @@
     </head>
 
     <body class="{{ config.extra.hyde_theme }} {% if config.extra.hyde_reverse %}layout-reverse{% endif %}">
-
         {% block sidebar %}
             <div class="sidebar">
                 <div class="container sidebar-sticky">
@@ -39,6 +38,9 @@
 
                     <ul class="sidebar-nav">
                         {% block sidebar_nav %}
+                        {% for link in config.extra.hyde_links %}
+                        <li><a href="{{link.url}}">{{link.name}}</a></li>
+                        {% endfor %}
                         {% endblock sidebar_nav %}
                     </ul>
                 </div>
