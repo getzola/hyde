@@ -1,0 +1,28 @@
+name = "hyde"
+description = "A classic blog theme"
+license = "MIT"
+homepage = "https://github.com/Keats/gutenberg-hyde"
+min_version = "0.2"
+
+[extra]
+hyde_reverse = false
+hyde_colour = ""
+hyde_links = []
+
+    [[extra.hyde_links]]
+    url = "https://google.com"
+    name = "Google.com"
+
+    [[extra.hyde_links]]
+    url = "https://google.fr"
+    name = "Google.fr"
+
+
+[author]
+name = "Vincent Prouillet"
+homepage = "https://vincent.is"
+
+[original]
+author =  "mdo"
+homepage = "http://markdotto.com/"
+repo = "https://www.github.com/mdo/hyde"
