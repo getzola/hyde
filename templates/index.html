@@ -26,7 +26,7 @@
     <body class="{{ config.extra.hyde_theme }} {% if config.extra.hyde_reverse %}layout-reverse{% endif %}">
         {% block sidebar %}
             <div class="sidebar">
-                <div class="container sidebar-sticky">
+                <div class="container {% if config.extra.hyde_sticky %}sidebar-sticky{% endif %}">
                     <div class="sidebar-about">
                         {% block sidebar_about %}
                             <a href="{{ config.base_url }}"><h1>{{ config.title }}</h1></a>

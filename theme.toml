@@ -5,6 +5,7 @@ homepage = "https://github.com/Keats/gutenberg-hyde"
 min_version = "0.2"
 
 [extra]
+hyde_sticky = true
 hyde_reverse = false
 hyde_theme = ""
 hyde_links = [
