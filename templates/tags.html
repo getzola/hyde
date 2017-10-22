@@ -1,0 +1,33 @@
+{% extends "index.html" %}
+
+{# Changes the title #}
+{% block title %}
+  Tags - {{ config.title }}
+{% endblock title %}
+
+
+{# Shows all Tags with 3 or more posts in the sidebar #}
+{% block extra_sidebar %}
+  {% set limit = 3 %}
+  Tags with {{ limit }} or more post{{ limit | pluralize }}:
+
+  {% for tag in tags %}        
+    {% if tag.pages | length >= limit %}
+      <a href="/tags/{{ tag.slug }}">{{ tag.name }}</a><br>
+    {% endif %}
+  {% endfor %}
+
+{% endblock extra_sidebar %}
+
+
+{# Shows all Tags in the contentblock #}
+{% block content %}
+  <h1>Tags</h1>
+  <ul>
+    {% for tag in tags %}
+      <li>               
+        <a href="/tags/{{ tag.slug }}">{{ tag.name }}</a> - {{ tag.pages | length }} post{{ tag.pages | length | pluralize }}
+      </li>
+    {% endfor %}
+  </ul>
+{% endblock content %}

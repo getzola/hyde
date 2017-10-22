@@ -1,0 +1,24 @@
+{% extends "index.html" %}
+
+{% block title %}
+  {{ category.name }} - {{ config.title }}
+{% endblock title %}
+
+{% block content %}
+  <h1>Category: {{ category.name }}</h1>
+  <div class="posts">
+    {% for page in category.pages %}
+      <div class="post">
+        <h2 class="post-title">
+          <a href="{{ page.permalink }}">
+            {{ page.title }}
+          </a>
+        </h2>
+
+        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }} - Reading time: {{ page.reading_time }} min <br>
+          Tags: {{ page.tags | join(sep=", ") }}
+        </span>
+      </div>
+    {% endfor %}
+  </div>
+{% endblock content %}
