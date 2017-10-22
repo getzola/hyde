@@ -1,9 +1,30 @@
 {% extends "index.html" %}
 
+{% block title %}
+  {{ page.title }} - {{ config.title }}
+{% endblock title %}
+
+{% block extra_sidebar %}
+  {% if page.toc %}
+    TOC:
+    <ul>
+      {% for h1 in page.toc %}
+        <li>
+          <a href="{{h1.permalink | safe}}">{{ h1.title }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  {% else %}
+    No TOC for this page
+  {% endif %}
+{% endblock extra_sidebar %}
+
 {% block content %}
 <div class="post">
   <h1 class="post-title">{{ page.title }}</h1>
-  <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+  <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }} - Reading time: {{ page.reading_time }} min <br> 
+        Tags: {{ page.tags | join(sep=", ") }}
+  </span>
   {{ page.content | safe }}
 </div>
 {% endblock content %}

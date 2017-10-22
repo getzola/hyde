@@ -1,0 +1,18 @@
+{% extends "index.html" %}s
+
+{% block title %}
+    Categories - {{ config.title }}
+{% endblock title %}
+
+{% block content %}
+    <h2>Categories</h2>
+    <ul>
+        {% for category in categories %}
+            <li> 
+                <h3><a href="/categories/{{ category.slug }}">{{ category.name }}</a></h3>
+                
+                <p>{{ category.pages | length }} post{{ category.pages | length | pluralize }}</p>
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock content %}

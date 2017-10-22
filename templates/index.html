@@ -38,11 +38,31 @@
 
                     <ul class="sidebar-nav">
                         {% block sidebar_nav %}
+                        <li><a href="{{ config.base_url }}/categories">Categories</a></li>
+                        <li><a href="{{ config.base_url }}/tags">Tags</a></li>
                         {% for link in config.extra.hyde_links %}
                         <li><a href="{{link.url}}">{{link.name}}</a></li>
                         {% endfor %}
                         {% endblock sidebar_nav %}
                     </ul>
+
+                    {# Additional block in the Sidebar, used from some templates for showing subsections,... #}
+                    {% block extra_sidebar %}
+                      {% if section %}                        
+                        <div class="posts">
+                            {% for subsection in section.subsections %}
+                                {% if loop.first %}
+                                  Subsection{{ section.subsections | length | pluralize }} of {{section.title }}:<br>
+                                {% endif %}
+                                
+                                <a href="{{ subsection.permalink }}">
+                                    {{ subsection.title }}
+                                </a><br>       
+                            {% endfor %}
+                        </div>
+                      {% endif %}
+                    {% endblock extra_sidebar %}
+
                 </div>
             </div>
         {% endblock sidebar %}
@@ -51,15 +71,17 @@
             {% block content %}
                 <div class="posts">
                     {% for page in section.pages %}
-                      <div class="post">
+                      <div>
                         <h1 class="post-title">
                           <a href="{{ page.permalink }}">
                             {{ page.title }}
                           </a>
                         </h1>
 
-                        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-
+                        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }} - Reading time: {{ page.reading_time }} min <br>
+                          Tags: {{ page.tags | join(sep=", ") }}
+                        </span>
+                      </div>
                     {% endfor %}
                 </div>
             {% endblock content %}
