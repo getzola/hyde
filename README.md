@@ -64,4 +64,4 @@ To create your own theme, look to the Themes section of [included CSS file](http
 
 ![Hyde with reverse layout](https://f.cloud.github.com/assets/98681/1831230/42b0d3ac-7384-11e3-8d54-2065afd03f9e.png)
 
-Hyde's page orientation can be reversed by setting `hyde_reversed` to `true` in the `config.toml`.
+Hyde's page orientation can be reversed by setting `hyde_reverse` to `true` in the `config.toml`.
