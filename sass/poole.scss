@@ -23,6 +23,7 @@
  * Container
  * Masthead
  * Posts and pages
+ * Footnotes
  * Pagination
  * Reverse layout
  * Themes
@@ -348,6 +349,20 @@ tbody tr:nth-child(odd) th {
 }
 .related-posts li a:hover small {
   color: inherit;
+}
+
+
+/* Footnotes */
+.footnote-definition:first-of-type {
+  border-top: 1px solid;
+  padding-top: 1rem;
+}
+.footnote-definition {
+  margin-top: 1rem;
+}
+.footnote-definition sup {
+  margin-left: -1rem;
+  float: left;
 }
 
 
