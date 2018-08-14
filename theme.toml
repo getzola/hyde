@@ -2,7 +2,8 @@ name = "hyde"
 description = "A classic blog theme"
 license = "MIT"
 homepage = "https://github.com/Keats/gutenberg-hyde"
-min_version = "0.2"
+min_version = "0.4"
+demo = "https://gutenberg-hyde.netlify.com"
 
 [extra]
 hyde_sticky = true

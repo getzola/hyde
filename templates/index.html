@@ -50,7 +50,7 @@
         <div class="content container">
             {% block content %}
                 <div class="posts">
-                    {% for page in section.pages %}
+                    {% for page in section.pages | reverse %}
                       <div class="post">
                         <h1 class="post-title">
                           <a href="{{ page.permalink }}">
