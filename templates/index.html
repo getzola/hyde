@@ -39,7 +39,7 @@
                     <ul class="sidebar-nav">
                         {% block sidebar_nav %}
                         {% for link in config.extra.hyde_links %}
-                        <li><a href="{{link.url}}">{{link.name}}</a></li>
+                        <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
                         {% endfor %}
                         {% endblock sidebar_nav %}
                     </ul>
