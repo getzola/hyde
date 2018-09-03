@@ -83,6 +83,23 @@ html {
   font-size: 3.25rem;
 }
 
+/* Sidebar sections */
+.sidebar-sections {
+  padding-left: 0;
+  list-style: none;
+}
+.sidebar-sections-item {
+  display: block;
+  font-size: 120%;
+}
+a.sidebar-sections-item:hover,
+a.sidebar-sections-item:focus {
+  text-decoration: underline;
+}
+.sidebar-sections-item.active {
+  font-weight: bold;
+}
+
 /* Sidebar nav */
 .sidebar-nav {
   padding-left: 0;
