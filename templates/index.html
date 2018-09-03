@@ -36,6 +36,17 @@
                         {% endblock sidebar_about %}
                     </div>
 
+                    <ul class="sidebar-sections">
+                      {% block sidebar_sections %}
+                      {% set index = get_section(path="_index.md") %}
+                      {% for subsection in index.subsections %}
+                      <li class="sidebar-sections-item {% if current_path == subsection.path %}active{% endif %}">
+                        <a href="{{ subsection.permalink }}">{{ subsection.title }}</a>
+                      </li>
+                      {% endfor %}
+                      {% endblock sidebar_sections %}
+                    </ul>
+
                     <ul class="sidebar-nav">
                         {% block sidebar_nav %}
                         {% for link in config.extra.hyde_links %}
