@@ -18,7 +18,7 @@ First download this theme to your `themes` directory:
 
 ```bash
 $ cd themes
-$ git clone https://github.com/Keats/hyde.git
+$ git clone https://github.com/getzola/hyde.git
 ```
 and then enable it in your `config.toml`:
 
