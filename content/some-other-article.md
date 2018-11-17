@@ -1,5 +1,6 @@
 +++
 title = "A first theme for Gutenberg"
+description = "Lorem ipsum dolor sit amet, consectetur adipiscing elit."
 date = 2017-09-25
 +++
 

@@ -59,6 +59,14 @@
                         </h1>
 
                         <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+
+                        <span class="post-summary">
+                          {% if page.summary %}
+                          {{ page.summary | safe }}
+                          {% elif page.description %}
+                          {{ page.description | safe }}
+                          {% endif %}
+                        </span>
                       </div>
                     {% endfor %}
                 </div>
