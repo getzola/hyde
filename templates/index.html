@@ -50,7 +50,7 @@
         <div class="content container">
             {% block content %}
                 <div class="posts">
-                    {% for page in section.pages | reverse %}
+					{% for page in paginator.pages %}
                       <div class="post">
                         <h1 class="post-title">
                           <a href="{{ page.permalink }}">
@@ -62,6 +62,18 @@
                       </div>
                     {% endfor %}
                 </div>
+
+				<nav>
+					<p>
+						{% if paginator.previous %}
+							<a href="{{ paginator.previous }}">&laquo; Previous</a> |
+						{% endif %}
+						<span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+						{% if paginator.next %}
+							| <a href="{{ paginator.next }}"> Next &raquo;</a>
+						{% endif %}
+					</p>
+				</nav>
             {% endblock content %}
         </div>
 
