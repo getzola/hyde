@@ -31,16 +31,16 @@
                         {% block sidebar_about %}
                             <a href="{{ config.base_url }}"><h1>{{ config.title }}</h1></a>
                             {% if config.description %}
-                            <p class="lead">{{config.description}}</p>
+                                <p class="lead">{{config.description}}</p>
                             {% endif %}
                         {% endblock sidebar_about %}
                     </div>
 
                     <ul class="sidebar-nav">
                         {% block sidebar_nav %}
-                        {% for link in config.extra.hyde_links %}
-                        <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
-                        {% endfor %}
+                            {% for link in config.extra.hyde_links %}
+                                <li class="sidebar-nav-item"><a href="{{link.url}}">{{link.name}}</a></li>
+                            {% endfor %}
                         {% endblock sidebar_nav %}
                     </ul>
                 </div>
@@ -50,30 +50,32 @@
         <div class="content container">
             {% block content %}
                 <div class="posts">
-					{% for page in paginator.pages %}
-                      <div class="post">
-                        <h1 class="post-title">
-                          <a href="{{ page.permalink }}">
-                            {{ page.title }}
-                          </a>
-                        </h1>
+                    {% for page in paginator.pages %}
+                        <div class="post">
+                            <h1 class="post-title">
+                                <a href="{{ page.permalink }}">
+                                    {{ page.title }}
+                                </a>
+                            </h1>
 
-                        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
-                      </div>
-                    {% endfor %}
+                            <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+                        </div>
+                        {% endfor %}
                 </div>
 
-				<nav>
-					<p>
-						{% if paginator.previous %}
-							<a href="{{ paginator.previous }}">&laquo; Previous</a> |
-						{% endif %}
-						<span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
-						{% if paginator.next %}
-							| <a href="{{ paginator.next }}"> Next &raquo;</a>
-						{% endif %}
-					</p>
-				</nav>
+                <nav>
+                    <p>
+                        {% if paginator.previous %}
+                            <a href="{{ paginator.previous }}">&laquo; Previous</a> |
+                        {% endif %}
+
+                        <span>Page {{ paginator.current_index }} of {{ paginator.number_pagers }}</span>
+
+                        {% if paginator.next %}
+                            | <a href="{{ paginator.next }}"> Next &raquo;</a>
+                        {% endif %}
+                    </p>
+                </nav>
             {% endblock content %}
         </div>
 
