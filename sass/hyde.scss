@@ -112,6 +112,20 @@ a.sidebar-nav-item:focus {
     bottom: 1rem;
     left:   1rem;
   }
+
+  // The #{} stuff is needed because of https://github.com/sass/sass/issues/2378
+  @supports(padding: m#{a}x(0px)) {
+    body:not(.layout-reverse) .sidebar-sticky {
+        // Notch is to left of sidebar; pad appropriately
+        padding-left: m#{a}x(1rem, env(safe-area-inset-left));
+    }
+
+    .layout-reverse .sidebar-sticky {
+        // Support iPhone X rounded corners and notch in landscape
+        // Notch is to right of sidebar; pad appropriately
+        padding-right: m#{a}x(1rem, env(safe-area-inset-right));
+    }
+  }
 }
 
 
@@ -125,6 +139,19 @@ a.sidebar-nav-item:focus {
   padding-top:    4rem;
   padding-bottom: 4rem;
 }
+
+@supports(padding: m#{a}x(0px)) {
+  body:not(.layout-reverse) .content {
+      // Notch is to right of content text; pad it appropriately
+      padding-right: m#{a}x(1rem, env(safe-area-inset-right));
+  }
+
+  .layout-reverse .content {
+      // Notch is to left of content text; pad it appropriately
+      padding-left: m#{a}x(1rem, env(safe-area-inset-left));
+  }
+}
+
 
 @media (min-width: 48em) {
   .content {
