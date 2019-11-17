@@ -57,8 +57,9 @@
                             {{ page.title }}
                           </a>
                         </h1>
-
-                        <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+                        {% if page.date %}
+                          <span class="post-date">{{ page.date | date(format="%Y-%m-%d") }}</span>
+                        {% endif %}
                       </div>
                     {% endfor %}
                 </div>
