@@ -10,3 +10,5 @@ hyde_theme = ""
 hyde_links = [
     {url = "https://google.com", name = "About"},
 ]
+hyde_show_analytics = false
+hyde_analytics_content = ""
