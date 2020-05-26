@@ -2,6 +2,7 @@ base_url = "https://zola-hyde.netlify.com"
 compile_sass = true
 title = "Hyde theme"
 description = "A clean blogging theme"
+generate_feed = true
 
 [extra]
 hyde_sticky = true

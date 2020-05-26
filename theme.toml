@@ -2,7 +2,7 @@ name = "hyde"
 description = "A classic blog theme"
 license = "MIT"
 homepage = "https://github.com/getzola/hyde"
-min_version = "0.5.0"
+min_version = "0.11.0"
 demo = "https://zola-hyde.netlify.com"
 
 [extra]
