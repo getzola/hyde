@@ -1,4 +1,4 @@
-base_url = "https://zola-hyde.netlify.com"
+base_url = "https://zola-hyde.netlify.app"
 compile_sass = true
 title = "Hyde theme"
 description = "A clean blogging theme"
