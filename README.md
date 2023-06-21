@@ -27,7 +27,8 @@ theme = "hyde"
 ```
 
 ## Folder tree
-This theme expects all the articles to be in the root of the folder. The expected `content` folder tree is as follow
+This theme expects all the articles to be in the root of the folder. The expected `content` folder tree is as follows:
+Note: put any assets of a post under the same folder of the respective post.
 ```
 ├───content
 │   │   _index.md
