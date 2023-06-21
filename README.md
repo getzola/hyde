@@ -32,12 +32,15 @@ This theme expects all the articles to be in the root of the folder. The expecte
 ├───content
 │   │   _index.md
 │   ├───content_1
+│   │       content_1_image.png
 │   │       index.md
 │   ├───content_2
+│   │       content_2_image.png
 │   │       index.md
 │   └───about
 │       │   _index.md
 │       └───about
+│               about_image.png
 │               index.md
 ```
 ## Options
