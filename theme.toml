@@ -3,7 +3,7 @@ description = "A classic blog theme"
 license = "MIT"
 homepage = "https://github.com/getzola/hyde"
 min_version = "0.11.0"
-demo = "https://zola-hyde.netlify.app"
+demo = "https://getzola.github.io/hyde/"
 
 [extra]
 hyde_sticky = true
