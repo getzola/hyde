@@ -26,6 +26,24 @@ and then enable it in your `config.toml`:
 theme = "hyde"
 ```
 
+## Folder tree
+This theme expects all the articles to be in the root of the folder. The expected `content` folder tree is as follows:
+Note: put any assets of a post under the same folder of the respective post.
+```
+├───content
+│   │   _index.md
+│   ├───content_1
+│   │       content_1_image.png
+│   │       index.md
+│   ├───content_2
+│   │       content_2_image.png
+│   │       index.md
+│   └───about
+│       │   _index.md
+│       └───about
+│               about_image.png
+│               index.md
+```
 ## Options
 
 ### Sidebar menu
