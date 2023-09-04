@@ -26,6 +26,14 @@ and then enable it in your `config.toml`:
 theme = "hyde"
 ```
 
+You will also need a file at `content/_index.md` with at least the following content:
+
+```
++++
+sort_by = "date"
++++
+```
+
 ## Options
 
 ### Sidebar menu
