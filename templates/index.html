@@ -10,6 +10,12 @@
 
       <title>{% block title %}{{ config.title }}{% endblock title %}</title>
 
+      <!-- Favicon -->
+      <link rel="apple-touch-icon" sizes="180x180" href="{{ get_url(path="apple-touch-icon.png", trailing_slash=false) }}">
+      <link rel="icon" type="image/png" sizes="32x32" href="{{ get_url(path="favicon-32x32.png", trailing_slash=false) }}">
+      <link rel="icon" type="image/png" sizes="16x16" href="{{ get_url(path="favicon-16x16.png", trailing_slash=false) }}">
+      <link rel="manifest" href="{{ get_url(path="site.webmanifest", trailing_slash=false) }}">
+      
       <!-- CSS -->
       <link rel="stylesheet" href="{{ get_url(path="print.css", trailing_slash=false) }}" media="print">
       <link rel="stylesheet" href="{{ get_url(path="poole.css", trailing_slash=false) }}">
